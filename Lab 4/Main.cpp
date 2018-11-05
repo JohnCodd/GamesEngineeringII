@@ -12,8 +12,8 @@ int main(void*)
 	Entity player;
 	HealthComponent hc;
 	ControlComponent cc;
-	player.addComponent(hc);
-	player.addComponent(cc);
+	player.addComponent(hc, "HealthComponent");
+	player.addComponent(cc, "ControlComponent");
 	HealthSystem hs;
 	ControlSystem cs;
 	hs.addEntity(player);
@@ -22,6 +22,7 @@ int main(void*)
 	{
 		hs.update();
 		cs.update();
+
 	}
 	return 0;
 }

@@ -11,8 +11,9 @@ public:
 		std::cout << "HealthSystem Update" << std::endl;
 		for (auto e : entities)
 		{
-			std::vector<Component> components = e.getComponents();
-			
+			auto component = dynamic_cast<HealthComponent*>(e.getComponents("HealthComponent"));
+			std::cout << "Health: " << component->getHealth() << std::endl;
+			component->setHealth(component->getHealth() - 1);
 		}
 	}
 };

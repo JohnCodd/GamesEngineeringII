@@ -3,4 +3,5 @@ class Component
 {
 public:
 	Component() {};
+	virtual ~Component() {}
 };
