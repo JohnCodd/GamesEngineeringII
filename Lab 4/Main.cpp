@@ -22,6 +22,7 @@ int main(void*)
 	{
 		hs.update();
 		cs.update();
+		system("PAUSE");
 
 	}
 	return 0;
