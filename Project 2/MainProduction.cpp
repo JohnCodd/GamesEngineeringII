@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Game.h"
+#include "Production.h"
 
 int main()
 {
-	Game game = Game();
+	Production game = Production();
 
 	std::vector<int> values;
 	std::string line;
