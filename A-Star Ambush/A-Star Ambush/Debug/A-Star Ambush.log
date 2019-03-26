@@ -1,0 +1,102 @@
+﻿  Game.cpp
+  Main.cpp
+  Map.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(951): error C2528: 'pointer': pointer to reference is illegal
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(903): note: see reference to class template instantiation 'std::allocator<_Ty>' being compiled
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(390): note: see reference to class template instantiation 'std::allocator_traits<_Alloc>' being compiled
+          with
+          [
+              _Alloc=std::allocator<Tile &>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(390): note: see reference to alias template instantiation 'std::_Rebind_alloc_t<std::allocator<_Ty>,_Ty>' being compiled
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(440): note: see reference to class template instantiation 'std::_List_base_types<_Ty,_Alloc>' being compiled
+          with
+          [
+              _Ty=Tile &,
+              _Alloc=std::allocator<Tile &>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(689): note: see reference to class template instantiation 'std::_List_alloc<std::_List_base_types<_Ty,_Alloc>>' being compiled
+          with
+          [
+              _Ty=Tile &,
+              _Alloc=std::allocator<Tile &>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(740): note: see reference to class template instantiation 'std::_List_buy<_Ty,_Alloc>' being compiled
+          with
+          [
+              _Ty=Tile &,
+              _Alloc=std::allocator<Tile &>
+          ]
+  c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\map.cpp(55): note: see reference to class template instantiation 'std::list<Tile &,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=Tile &
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(952): error C2528: 'const_pointer': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(970): error C2528: 'address': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(975): error C2528: 'address': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(989): error C2528: '_Ptr': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(996): error C2528: 'allocate': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(1002): error C2528: 'allocate': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(840): error C2528: 'abstract declarator': pointer to reference is illegal
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(905): note: see reference to class template instantiation 'std::_Default_allocator_traits<_Alloc>' being compiled
+          with
+          [
+              _Alloc=std::allocator<Tile &>
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(841): error C2528: 'abstract declarator': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(860): error C2528: '<template-parameter>': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(866): error C2528: '<template-parameter>': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(406): error C2528: '<template-parameter>': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(934): error C2528: 'abstract declarator': pointer to reference is illegal
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(381): note: see reference to class template instantiation 'std::_Simple_types<_Ty>' being compiled
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(449): note: see reference to class template instantiation 'std::_List_simple_types<_Ty>' being compiled
+          with
+          [
+              _Ty=Tile &
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(935): error C2528: 'abstract declarator': pointer to reference is illegal
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(1164): error C2535: 'void std::list<Tile &,std::allocator<_Ty>>::push_front(_Ty)': member function already defined or declared
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(899): note: see declaration of 'std::list<Tile &,std::allocator<_Ty>>::push_front'
+          with
+          [
+              _Ty=Tile &
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(1174): error C2535: 'void std::list<Tile &,std::allocator<_Ty>>::push_back(_Ty)': member function already defined or declared
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(904): note: see declaration of 'std::list<Tile &,std::allocator<_Ty>>::push_back'
+          with
+          [
+              _Ty=Tile &
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(1223): error C2535: 'std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>> std::list<_Ty,std::allocator<_Ty>>::insert(std::_List_const_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,_Ty)': member function already defined or declared
+          with
+          [
+              _Ty=Tile &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\list(909): note: see declaration of 'std::list<Tile &,std::allocator<_Ty>>::insert'
+          with
+          [
+              _Ty=Tile &
+          ]
+  Tile.cpp
+  Generating Code...
