@@ -51,7 +51,7 @@ void Map::render(SDL_Renderer & renderer)
 	}
 }
 
-std::list<Tile&> Map::astarSearch(Tile & start, Tile & goal)
+std::list<Tile> Map::astarSearch(Tile & start, Tile & goal)
 {
 	std::list<Tile> openList;
 	std::list<Tile> closedList;
@@ -67,7 +67,14 @@ std::list<Tile&> Map::astarSearch(Tile & start, Tile & goal)
 		{
 
 		}
+		else
+		{
+			for (auto &t : current.getAdj())
+			{
+
+			}
+		}
 	}
 
-	return std::list<Tile&>();
+	return std::list<Tile>();
 }
