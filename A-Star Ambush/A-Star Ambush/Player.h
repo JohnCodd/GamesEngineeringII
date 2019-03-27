@@ -1,13 +1,14 @@
 #pragma once
 #include "SDL.h"
 #include "SDL_image.h"
+#include "Vector2f.h"
 #include <stdio.h>
 #include <iostream>
 
 class Player
 {
 public:
-	Player();
+	Player(Vector2f tSize);
 	~Player();
 	void setTexture(std::string path, SDL_Renderer& renderer);
 	void moveUp();
@@ -16,7 +17,7 @@ public:
 	void moveLeft();
 	void render(SDL_Renderer& renderer);
 private:
-	int m_speed = 10;
+	Vector2f m_tileSize;
 	SDL_Point m_position;
 	SDL_Rect m_rect;
 	SDL_Texture* m_texture;

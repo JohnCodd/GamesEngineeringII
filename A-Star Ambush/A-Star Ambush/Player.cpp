@@ -2,9 +2,10 @@
 
 
 
-Player::Player()
+Player::Player(Vector2f tSize)
 {
 	m_position = { 0,0 };
+	m_tileSize = tSize;
 }
 
 
@@ -14,30 +15,29 @@ Player::~Player()
 
 void Player::moveUp()
 {
-	m_position.y -= m_speed;
+	m_position.y -= 1;
 }
 
 void Player::moveRight()
 {
-	m_position.x += m_speed;
+	m_position.x += 1;
 }
 
 void Player::moveDown()
 {
-	m_position.y += m_speed;
+	m_position.y += 1;
 }
 
 void Player::moveLeft()
 {
-	m_position.x -= m_speed;
+	m_position.x -= 1;
 }
 
 void Player::render(SDL_Renderer& renderer)
 {
-	m_rect = { m_position.x, m_position.y , 50, 50 };
+	m_rect = { static_cast<int>(m_position.x * m_tileSize.x), static_cast<int>(m_position.y * m_tileSize.y), static_cast<int>(m_tileSize.x), static_cast<int>(m_tileSize.y) };
 	SDL_SetRenderDrawColor(&renderer, 0x00, 0x00, 0xFF, 0xFF);
 	SDL_RenderFillRect(&renderer, &m_rect);
-	//SDL_RenderCopy(&renderer, m_texture, NULL, NULL);
 }
 
 void Player::setTexture(std::string path, SDL_Renderer& renderer)

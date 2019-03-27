@@ -1,9 +1,11 @@
 #pragma once
 #include "Player.h"
+#include "AI.h"
 #include "Map.h"
 
-const int SCREEN_WIDTH = 1066;
-const int SCREEN_HEIGHT = 720;
+const float SCREEN_WIDTH = 1066;
+const float SCREEN_HEIGHT = 720;
+const Vector2f MAP_SIZE = Vector2f(50, 50);
 
 class Game
 {
@@ -29,6 +31,7 @@ private:
 	SDL_Surface* m_screenSurface = NULL;
 	SDL_Renderer* m_Renderer = NULL;
 	Player m_player;
+	AI m_ai;
 	Map m_map;
 };
 

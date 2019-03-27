@@ -1,6 +1,9 @@
 ﻿  Game.cpp
-  Main.cpp
-  Map.cpp
-  Tile.cpp
-  Generating Code...
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(8): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(6): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(7): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   A-Star Ambush.vcxproj -> C:\Users\c00208049\Documents\Games Engineering 2\A-Star Ambush\Debug\A-Star Ambush.exe
