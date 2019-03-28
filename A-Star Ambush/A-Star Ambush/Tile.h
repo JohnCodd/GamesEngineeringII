@@ -7,6 +7,11 @@
 class Tile
 {
 public:
+	enum TileType
+	{
+		Empty,
+		Wall
+	};
 	Tile() {};
 	Tile(Vector2f p, Vector2f tSize);
 	~Tile();
@@ -14,7 +19,8 @@ public:
 	void setGCost(double g) { m_gCost = g; }
 	void setHCost(double h) { m_hCost = h; }
 	void setCost(double c) { m_cost = c; }
-	void setPrevious(Tile &t) { m_previous = &t; }
+	void setPrevious(Tile *t) { m_previous = t; }
+	void setType(TileType type) { m_type = type; }
 	void addEdge(Tile& t) { adj.push_back(&t); }
 	float getGCost() { return m_gCost; }
 	float getHCost() { return m_hCost; }
@@ -22,6 +28,7 @@ public:
 	Tile* getPrevious() { return m_previous; }
 	Vector2f getPosition() { return m_position; }
 	std::list<Tile*> getAdj() { return adj; }
+	TileType getType() { return m_type; }
 	bool operator==(Tile t) { return (m_position.x == t.m_position.x && m_position.y == t.m_position.y); }
 private:
 	Vector2f m_position;
@@ -32,5 +39,6 @@ private:
 	std::list<Tile*> adj;
 	Tile* m_previous = nullptr;
 	SDL_Rect m_rect;
+	TileType m_type = TileType::Empty;
 };
 

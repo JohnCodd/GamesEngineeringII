@@ -2,7 +2,8 @@
 
 
 
-AI::AI(Vector2f p, Vector2f tSize) : m_position(p), m_tileSize(tSize)
+AI::AI(Vector2f p, Vector2f tSize) : m_position(p), m_tileSize(tSize),
+	m_canUpdate(true)
 {
 }
 
@@ -11,12 +12,20 @@ AI::~AI()
 {
 }
 
-void AI::update()
+void AI::update(float dt)
 {
-	if (m_path.size() > 0)
+	if (m_canUpdate)
 	{
-		m_position = m_path.front().getPosition();
-		m_path.pop_front();
+		if (m_path.size() > 0)
+		{
+			canMove -= dt;
+			if (canMove <= 0)
+			{
+				m_position = m_path.front().getPosition();
+				m_path.pop_front();
+				canMove = speed;
+			}
+		}
 	}
 }
 

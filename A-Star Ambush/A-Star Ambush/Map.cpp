@@ -11,8 +11,8 @@ Map::Map(Vector2f mapSize, Vector2f windowSize)
 			Vector2f p = Vector2f(j, i);
 			Vector2f pairPos;
 			pairPos = p;
-			Vector2f tSize = Vector2f(windowSize.x / mapSize.x, windowSize.y / mapSize.y);
-			m_tiles[pairPos] = Tile(p, tSize);
+			m_tSize = Vector2f(windowSize.x / mapSize.x, windowSize.y / mapSize.y);
+			m_tiles[pairPos] = Tile(p, m_tSize);
 			Vector2f adj;
 			if (i > 0)
 			{
@@ -51,12 +51,25 @@ void Map::render(SDL_Renderer & renderer)
 	}
 }
 
+void Map::leftClick(Vector2f pos)
+{
+	Vector2f mousePosition = Vector2f(floor(pos.x / m_tSize.x), floor(pos.y / m_tSize.y));
+	m_tiles[mousePosition].setType(Tile::TileType::Wall);
+}
+
 std::list<Tile> Map::astarSearch(Tile & start, Tile & goal)
 {
 	std::list<Tile*> openList;
 	std::list<Tile*> closedList;
-
-
+	
+	start.setPrevious(nullptr);
+	for (auto&t : m_tiles)
+	{
+		t.second.setPrevious(nullptr);
+		t.second.setCost(9999);
+		t.second.setGCost(9999);
+		t.second.setHCost(9999);
+	}
 	openList.push_back(&start);
 
 	while (openList.size() > 0)
@@ -89,32 +102,34 @@ std::list<Tile> Map::astarSearch(Tile & start, Tile & goal)
 				bool isClosed = false;
 				for (auto &closedt : closedList)
 				{
-					if (t->getPosition() == Vector2f(5, 5))
-					{
-						int x = 0;
-						int y;
-					}
 					if (t == closedt)
 					{
 						isClosed = true;
 					}
 				}
-				if (!isClosed)
+				if (!isClosed && t->getType() != Tile::TileType::Wall)
 				{
-					t->setGCost(current->getGCost() + 1.0f);
-					Vector2f goalPos = goal.getPosition();
-					float distance = t->getPosition().distance(goalPos);
-					t->setHCost(distance);
-					t->setCost(t->getGCost() + t->getHCost());
-					t->setPrevious(*current);
+
+					bool alreadyInOpen = false;
 					for (auto &opent : openList)
 					{
 						if (t == opent && t->getGCost() > opent->getGCost())
 						{
-							continue;
+							alreadyInOpen = true;
+							break;
 						}
+
 					}
-					openList.push_back(t);
+					if (alreadyInOpen == false)
+					{
+						t->setGCost(current->getGCost() + 1.0f);
+						Vector2f goalPos = goal.getPosition();
+						float distance = t->getPosition().distance(goalPos);
+						t->setHCost(distance);
+						t->setCost(t->getGCost() + t->getHCost());
+						t->setPrevious(current);
+						openList.push_back(t);
+					}
 				}
 			}
 		}

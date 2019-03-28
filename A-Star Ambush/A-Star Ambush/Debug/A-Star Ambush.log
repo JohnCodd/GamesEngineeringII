@@ -1,9 +1,19 @@
 ﻿  Game.cpp
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(8): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(6): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(7): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\ai.h(20): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(7): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(125): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.cpp(175): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\game.h(11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Main.cpp
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\tile.h(21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\c00208049\documents\games engineering 2\a-star ambush\a-star ambush\ai.h(20): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
   A-Star Ambush.vcxproj -> C:\Users\c00208049\Documents\Games Engineering 2\A-Star Ambush\Debug\A-Star Ambush.exe

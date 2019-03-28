@@ -16,9 +16,10 @@ public:
 	void moveRight();
 	void moveLeft();
 	void render(SDL_Renderer& renderer);
+	Vector2f getPosition() { return m_position; }
 private:
 	Vector2f m_tileSize;
-	SDL_Point m_position;
+	Vector2f m_position;
 	SDL_Rect m_rect;
 	SDL_Texture* m_texture;
 };
